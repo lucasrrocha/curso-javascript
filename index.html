@@ -7,260 +7,160 @@
     <title>Curso Javascript</title>
   </head>
   <body>
+    <!-- <button class="botao">Criar quadrado Vermelho</button> -->
+    <!-- <div id="app"> -->
+    <!-- Este é um exemplo de um evento inline -->
+    <!-- <input onkeypress="mostraAlerta()" />
+      <button onclick="mostraAlerta()">Me pressione</button> -->
+
+    <!-- <input type="text" name="nome" id="nome" class="nome" />
+      <button class="botao">Adicionar</button> -->
+    <!-- <input id="nome" /> -->
+    <!-- <div class="box"></div> -->
+    <!-- </div> -->
+    <ul></ul>
+
+    <input type="text" name="nome" />
+    <button onClick="adicionar()">Adicionar</button>
+
     <script>
-      // Variáveis e dados
+      //A DOM basicamente é a arvore de elementos dentro do nosso HTML. Todos os elementos visualmente dispostos em tela
 
-      // var nome = "Lucas";
-      // var idade = 26;
-      // var peso = 75.6;
-      // var humano = true;
+      // function mostraAlerta() {
+      //   alert('Botão clicado');
+      // }
 
-      // var alunos = ["Lucas", "Gabriel", "Diego"];
+      // var inputElement = document.getElementById('nome');
+      // var inputElement = document.getElementsByTagName('input')[0];
+      // var inputElement = document.getElementsByClassName('nome')[0];
+      // var inputElement = document.querySelector('input[name = nome]');
+      // var inputElement = document.querySelector('input[name = nome]');
+      // var btnElement = document.querySelector('button.botao');
 
-      // var aluno = {
-      //   nome: alunos[0],
-      //   idade: 26,
-      //   peso: 75.6,
-      //   humano: true,
+      // btnElement.onclick = function() {
+      //   var text = inputElement.value;
+      //   alert(text);
       // };
 
-      // console.log(alunos[0]);
-      // console.log(aluno.nome );
+      // var linkElement = document.createElement('a');
+      // linkElement.setAttribute('href', 'https://google.com');
+      // // linkElement.setAttribute('class', 'ancora');
 
-      // Operações matematicas
+      // var textElement = document.createTextNode('Acesse o Google');
+      // linkElement.appendChild(textElement);
 
-      // var x = 14,
-      //   y = 5;
+      // var containerElement = document.querySelector('#app');
+      // containerElement.appendChild(linkElement);
 
-      // x += 3;
-      // x -= 3;
-      // x *= 3;
-      // x /= 3;
+      // var inputElement = document.querySelector('#nome');
+      // containerElement.removeChild(inputElement);
 
-      // var resultado = x + y;
+      // var boxElement = document.querySelector('.box');
 
-      // console.log(x);
-      // console.log(resultado);
+      // boxElement.style.width = '100px';
+      // boxElement.style.height = '100px';
+      // boxElement.style.backgroundColor = '#000';
 
-      // Funções
+      //Exercicios módulo 2
+      //Exercicio 1
+      //Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadradovermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deveaparecer na tela.
 
-      // function soma(numero1, numero2) {
-      //   var resultado = numero1 + numero2;
+      // var buttonElement = document.querySelector('.botao');
+      // var divElement = document.querySelector('#app');
 
-      //   return resultado;
-      // }
-      // var resultado = soma(1, 2);
-      // console.log(resultado);
+      // buttonElement.onclick = function() {
+      //   var createBox = document.createElement('div');
+      //   var boxElement = createBox.setAttribute('class', 'box');
 
-      // Condicionais
+      //   createBox.style.width = '100px';
+      //   createBox.style.height = '100px';
+      //   createBox.style.backgroundColor = '#F00';
 
-      // function retornaSexo(sexo) {
-      // M, F
-      //Masculino, Feminino
-
-      // if (sexo === "M") {
-      //   return "Masculino";
-      // } else if (sexo === "F") {
-      //   return "Feminino";
-      // } else {
-      //   return "Outro";
-      // }
-
-      //   switch (sexo) {
-      //     case "M":
-      //       return "Masculino";
-      //     case "F":
-      //       return "Feminino";
-      //     default:
-      //       return "Outro";
-      //   }
-      // }
-
-      // var resultado = retornaSexo("F");
-      // console.log(resultado);
-
-      //Operadores Lógicos
-
-      //AND, OR, NOT
-
-      // var sexo = "F",
-      //   idade = 17;
-
-      // if (sexo === "M" || idade >= 18) {
-      //   console.log("OK");
-      // }
-
-      // var sexo = "F";
-
-      // if (sexo !== "M") {
-      //   console.log("OK");
-      // }
-
-      // var sexo = "F";
-      // var masculino;
-
-      // if (sexo === "M") {
-      //   var masculino = true;
-      // } else {
-      //   var masculino = false;
-      // }
-
-      // Isso é igual a isso
-
-      // var sexo = "M";
-
-      // var masculino = sexo === "M";
-
-      // console.log(masculino);
-
-      // Condição ternária
-
-      // var sexo = 'M';
-
-      // if (sexo === 'M') {
-      //   return 'Masculino';
-      // } else {
-      //   return 'Feminino';
-      // }
-
-      // Isso é a mesma coisa disso
-
-      // var retorno = sexo === 'M' ? 'Masculino' : 'Feminino';
-
-      // console.log(retorno);
-
-      // Estruturas de repetição
-
-      //for, while
-
-      // for (var i = 0; i <= 10; i++) {
-      //   console.log(i);
-      // }
-
-      // var j = 0;
-      // while (j <= 8) {
-      //   console.log(j);
-
-      //   j++;
-      // }
-
-      // intervalo e timeout
-      // function exibeAlgo() {
-      //   console.log('Hello World');
-      // }
-
-      // setTimeout(exibeAlgo, 5000);
-
-      //Exercicios: Módulo 1
-      //1º Exercicio
-      //Crie uma função que dado o objeto a seguir:
-
-      // var endereco = {
-      //   rua: 'Rua dos pinheiros',
-      //   numero: 1293,
-      //   bairro: 'Centro',
-      //   cidade: 'São Paulo',
-      //   uf: 'SP',
+      //   divElement.appendChild(createBox);
       // };
 
-      //Retorne o seguinte conteúdo:
-      //O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" comnº 1293.
+      //Exercicio 2
+      //Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima dealgum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
 
-      // console.log(
-      //   'O usuário mora em ' +
-      //     endereco.cidade +
-      //     ' / ' +
-      //     endereco.uf +
-      //     ', no bairro ' +
-      //     endereco.bairro +
-      //     ', na rua ' +
-      //     endereco.rua +
-      //     ' com o nº ' +
-      //     endereco.numero + '.'
-      // );
-
-      // Exercicio 2
-      //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
-
-      // function pares(x, y) {
-      //   // código aqui
-      //   while (x <= y) {
-      //     if (x % 2 == 0) {
-      //       console.log(x);
-      //     }
-      //     x++;
+      // function getRandomColor() {
+      //   var letters = '0123456789ABCDEF';
+      //   var color = '#';
+      //   for (var i = 0; i < 6; i++) {
+      //     color += letters[Math.floor(Math.random() * 16)];
       //   }
+      //   return color;
       // }
-      // pares(32, 321);
+      // var newColor = getRandomColor(); // #E943F0
+
+      // var buttonElement = document.querySelector('.botao');
+      // var divElement = document.querySelector('#app');
+
+      // buttonElement.onclick = function() {
+      //   var createBox = document.createElement('div');
+
+      //   createBox.style.width = '100px';
+      //   createBox.style.height = '100px';
+      //   createBox.style.backgroundColor = '#F00';
+
+      //   createBox.onmouseover = function() {
+      //     createBox.style.backgroundColor = newColor;
+      //   };
+      //   createBox.onmouseleave = function() {
+      //     createBox.style.backgroundColor = '#F00';
+      //   };
+
+      //   divElement.appendChild(createBox);
+      // };
 
       //Exercicio 3
-      //Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"e retorna um booleano true/false caso exista ou não.
+      //A partir do seguinte vetor:
 
-      // function temHabilidade(skills) {
-      //   // código aqui
-      //   //Esse eu fiz
-      //   // var habilidade = skills.indexOf('Javascript');
-      //   // // if (habilidade >= 0) {
-      //   // //   console.log('true');
-      //   // // } else {
-      //   // //   console.log('false');
-      //   // // }
-      //   // var skill = habilidade >= 0 ? 'true' : 'false';
-      //   // console.log(skill);
-      //   //Solução Diego
-      //   // return skills.indexOf('Javascript') !== -1;
+      // var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+      // var listElement = document.querySelector('ul');
+
+      // for (nome of nomes) {
+      //   var liElement = document.createElement('li');
+      //   var textElement = document.createTextNode(nome);
+
+      //   liElement.appendChild(textElement);
+      //   listElement.appendChild(liElement);
       // }
-      // var skills = ['Javascript', 'ReactJS', 'React Native'];
-      // console.log(temHabilidade(skills));
-      // // true ou false
+
+      //Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+      //• Diego
+      //• Gabriel
+      //• Lucas
 
       //Exercicio 4
-      //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+      //Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
 
-      // function experiencia(anos) {
-      //   // código aqui
-      //   if (anos >= 0 && anos <= 1) {
-      //     return 'Iniciante';
-      //   } else if (anos > 1 && anos <= 3) {
-      //     return 'Intermediário';
-      //   } else if (anos > 3 && anos <= 6) {
-      //     return 'Avançado';
-      //   } else {
-      //     return 'Jedi Master';
-      //   }
+      //<input type="text" name="nome">
+      //<button onClick="adicionar()">Adicionar</button>
+      //Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+      // nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aosdemais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+
+      // var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+      // var listElement = document.querySelector('ul');
+      // var inputElement = document.querySelector('input');
+
+      // function addItem(text) {
+      //   var liElement = document.createElement('li');
+      //   var textElement = document.createTextNode(text);
+
+      //   liElement.appendChild(textElement);
+      //   listElement.appendChild(liElement);
       // }
 
-      // var anosEstudo = 8;
-      // var exp = experiencia(anosEstudo);
-      // console.log(exp);
-      // De 0-1 ano: Iniciante
-      // De 1-3 anos: Intermediário
-      // De 3-6 anos: Avançado
-      // De 7 acima: Jedi Master
-
-      //Exercicio 5
-      //Dado o seguinte vetor de objetos:
-
-      // var usuarios = [
-      //   { nome: 'Diego', habilidades: ['Javascript', 'ReactJS', 'Redux'] },
-      //   { nome: 'Gabriel', habilidades: ['VueJS', 'Ruby on Rails', 'Elixir'] },
-      // ];
-
-      //Escreva uma função que produza o seguinte resultado:
-      //O Diego possui as habilidades: Javascript, ReactJS, Redux
-      //O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
-      // function skills(array) {
-      //   for (let retorno of array) {
-      //     console.log(
-      //       'O ' +
-      //         retorno.nome +
-      //         ' possui as habilidades: ' +
-      //         retorno.habilidades.join(','),
-      //     );
-      //   }
+      // function adicionar() {
+      //   addItem(inputElement.value);
+      //   inputElement.value = '';
       // }
 
-      // skills(usuarios);
+      // for (nome of nomes) {
+      //   addItem(nome);
+      // }
     </script>
   </body>
 </html>
