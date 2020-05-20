@@ -1,1 +1,5 @@
-# curso-javascript
+# Curso javascript
+
+---
+
+Curso de Javascript do Stater Rockeseat 🚀
